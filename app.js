@@ -5,11 +5,11 @@ const titleInput = document.querySelector('#title-input');
 const typeSelect = document.querySelector('#type-select');
 const resultsTableBody = document.querySelector('#results-table #results-table-body');
 
-searchForm.addEventListener('submit', function(e) {
+searchForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const title = titleInput.value.trim();
     const type = typeSelect.value;
-    
+
     if (title === '') {
         alert('Proszę wpisać fragment tytułu.');
         return;
