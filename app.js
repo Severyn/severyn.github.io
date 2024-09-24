@@ -27,56 +27,61 @@ function fetchMovies(title, type) {
         .then(response => response.json())
         .then(data => {
             if (data.Response === "True") {
-                populateTable(data.Search);
+                const ids = data.Search.map(movie => movie.imdbID);
+                Promise.allSettled(ids.map(id => fetchMovieDetails(id)))
+                    .then(results => {
+                        const successfulResults = results.filter(result => result.status === 'fulfilled');
+                        const moviesData = successfulResults.map(result => result.value);
+                        if (moviesData.length > 0) {
+                            populateTable(moviesData);
+                        } else {
+                            displayEmptyState();
+                        }
+                    });
             } else {
-                alert(data.Error);
                 clearTable();
+                displayEmptyState();
             }
         })
         .catch(error => {
-            console.error('Błąd podczas pobierania danych:', error);
-            alert('Wystąpił błąd podczas pobierania danych.');
+            console.error('Błąd:', error);
+            displayErrorState();
         });
-}
-
-function populateTable(movies) {
-    clearTable();
-
-    movies.forEach(movie => {
-        fetchMovieDetails(movie.imdbID);
-    });
 }
 
 function fetchMovieDetails(imdbID) {
-    const url = `https://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}`;
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.Response === "True") {
-                addRowToTable(data);
-            }
-        })
-        .catch(error => {
-            console.error('Błąd podczas pobierania szczegółów produkcji:', error);
-        });
+    return fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}`)
+        .then(response => response.json());
 }
 
-function addRowToTable(movie) {
-    const row = document.createElement('tr');
-    const titleCell = document.createElement('td');
-    titleCell.textContent = movie.Title;
-    row.appendChild(titleCell);
-    const yearCell = document.createElement('td');
-    yearCell.textContent = movie.Year;
-    row.appendChild(yearCell);
-    const countryCell = document.createElement('td');
-    countryCell.textContent = movie.Country || 'N/A';
-    row.appendChild(countryCell);
-    const typeCell = document.createElement('td');
-    typeCell.textContent = capitalizeFirstLetter(movie.Type);
-    row.appendChild(typeCell);
-    resultsTableBody.appendChild(row);
+class MovieRow extends HTMLTableRowElement {
+    constructor(movie) {
+        super();
+        this.innerHTML = `
+            <td>${movie.Title}</td>
+            <td>${movie.Year}</td>
+            <td>${movie.Country || 'N/A'}</td>
+            <td>${capitalizeFirstLetter(movie.Type)}</td>
+        `;
+    }
+}
+customElements.define('movie-row', MovieRow, { extends: 'tr' });
+
+function populateTable(movies) {
+    clearTable();
+    movies.forEach(movie => {
+        const row = document.createElement('tr', { is: 'movie-row' });
+        row.movie = movie;
+        resultsTableBody.appendChild(row);
+    });
+}
+
+function displayEmptyState() {
+    resultsTableBody.innerHTML = `<tr><td colspan="4">Brak wyników dla wybranych filtrów.</td></tr>`;
+}
+
+function displayErrorState() {
+    resultsTableBody.innerHTML = `<tr><td colspan="4">Wystąpił błąd podczas ładowania danych. Spróbuj ponownie później.</td></tr>`;
 }
 
 function clearTable() {
