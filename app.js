@@ -62,7 +62,7 @@ function fetchMovieDetails(imdbID) {
 
 class MovieRow extends HTMLTableRowElement {
     constructor(movie) {
-        super(); i
+        super();
         if (movie) {
             this.innerHTML = `
                 <td>${movie.Title}</td>
