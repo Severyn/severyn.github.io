@@ -31,14 +31,23 @@ function fetchMovies(title, type) {
                 Promise.allSettled(ids.map(id => fetchMovieDetails(id)))
                     .then(results => {
                         const successfulResults = results.filter(result => result.status === 'fulfilled');
+                        const failedResults = results.filter(result => result.status === 'rejected');
                         const moviesData = successfulResults.map(result => result.value);
+
+                        clearTable();
+
                         if (moviesData.length > 0) {
                             populateTable(moviesData);
                         } else {
                             displayEmptyState();
                         }
+
+                        if (failedResults.length > 0) {
+                            alert(`Nie wszystkie filmy zostały pobrane. Nieudane zapytania: ${failedResults.length}`);
+                        }
                     });
             } else {
+                console.error('Brak wyników dla tego zapytania.');
                 clearTable();
                 displayEmptyState();
             }
@@ -57,12 +66,16 @@ function fetchMovieDetails(imdbID) {
 class MovieRow extends HTMLTableRowElement {
     constructor(movie) {
         super();
-        this.innerHTML = `
-            <td>${movie.Title}</td>
-            <td>${movie.Year}</td>
-            <td>${movie.Country || 'N/A'}</td>
-            <td>${capitalizeFirstLetter(movie.Type)}</td>
-        `;
+        if (movie) {
+            this.innerHTML = `
+                <td>${movie.Title}</td>
+                <td>${movie.Year}</td>
+                <td>${movie.Country || 'N/A'}</td>
+                <td>${capitalizeFirstLetter(movie.Type)}</td>
+            `;
+        } else {
+            console.error("Nie przekazano danych filmu!");
+        }
     }
 }
 customElements.define('movie-row', MovieRow, { extends: 'tr' });
@@ -70,8 +83,7 @@ customElements.define('movie-row', MovieRow, { extends: 'tr' });
 function populateTable(movies) {
     clearTable();
     movies.forEach(movie => {
-        const row = document.createElement('tr', { is: 'movie-row' });
-        row.movie = movie;
+        const row = new MovieRow(movie);
         resultsTableBody.appendChild(row);
     });
 }
