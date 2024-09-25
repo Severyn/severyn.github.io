@@ -62,13 +62,17 @@ function fetchMovieDetails(imdbID) {
 
 class MovieRow extends HTMLTableRowElement {
     constructor(movie) {
-        super();
-        this.innerHTML = `
-            <td>${movie.Title}</td>
-            <td>${movie.Year}</td>
-            <td>${movie.Country || 'N/A'}</td>
-            <td>${capitalizeFirstLetter(movie.Type)}</td>
-        `;
+        super(); i
+        if (movie) {
+            this.innerHTML = `
+                <td>${movie.Title}</td>
+                <td>${movie.Year}</td>
+                <td>${movie.Country || 'N/A'}</td>
+                <td>${capitalizeFirstLetter(movie.Type)}</td>
+            `;
+        } else {
+            console.error("Nie przekazano danych filmu!");
+        }
     }
 }
 customElements.define('movie-row', MovieRow, { extends: 'tr' });
