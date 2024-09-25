@@ -32,13 +32,18 @@ function fetchMovies(title, type) {
                     .then(results => {
                         const successfulResults = results.filter(result => result.status === 'fulfilled');
                         const moviesData = successfulResults.map(result => result.value);
+                        clearTable();
                         if (moviesData.length > 0) {
                             populateTable(moviesData);
                         } else {
                             displayEmptyState();
                         }
+                        if (failedResults.length > 0) {
+                            alert(`Nie wszystkie filmy zostały pobrane. Nieudane zapytania: ${failedResults.length}`);
+                        }
                     });
             } else {
+                console.error('Błąd:', error);
                 clearTable();
                 displayEmptyState();
             }
