@@ -31,6 +31,7 @@ function fetchMovies(title, type) {
                 Promise.allSettled(ids.map(id => fetchMovieDetails(id)))
                     .then(results => {
                         const successfulResults = results.filter(result => result.status === 'fulfilled');
+                        const failedResults = results.filter(result => result.status === 'rejected');
                         const moviesData = successfulResults.map(result => result.value);
                         clearTable();
                         if (moviesData.length > 0) {
