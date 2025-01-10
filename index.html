@@ -1,48 +1,939 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Admand - zadanie rekrutacyjne</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>Publuu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Publuu - Interactive Online Publication" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="app.js"></script>
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Katalog Produkcji</h1>
-        <form id="search-form" class="mb-4">
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <input type="text" id="title-input" class="form-control" placeholder="Wpisz fragment tytułu"
-                        required>
-                </div>
-                <div class="col-md-4">
-                    <select id="type-select" class="form-select">
-                        <option value="">Wszystko</option>
-                        <option value="movie">Film</option>
-                        <option value="series">Serial</option>
-                        <option value="episode">Epizod</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary w-100">Szukaj</button>
+    <main role="main">
+        <header id="header" class="header" role="banner" data-aos="fade-down">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">
+                            <img src="assets/images/publuu_logo.svg" class="navbar-logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Solutions
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Lorem</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Prices</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Help</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                            </ul>
+                            <div class="header__left">
+                                <a href="#" class="btn btn-primary btn-primary--black">Try for free</a>
+                                <a href="#" class="btn btn-primary btn-primary--white">Login</a>
+                                <li class="nav-item dropdown header__lg-wrap">
+                                    <a class="nav-link dropdown-toggle header__lg" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span>
+                                            <svg width="32" height="23" viewBox="0 0 32 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 0.5H32V22.5H0V0.5Z" fill="white" />
+                                                <path
+                                                    d="M0 0.5H32V2.19181H0V0.5ZM0 3.88363H32V5.57544H0V3.88363ZM0 7.26725H32V8.95906H0V7.26725ZM0 10.6509H32V12.3427H0V10.6509ZM0 14.0409H32V15.7327H0V14.0409ZM0 17.4246H32V19.1164H0V17.4246ZM0 20.8082H32V22.5H0V20.8082Z"
+                                                    fill="#D80027" />
+                                                <path d="M0 0.5H16V12.3427H0V0.5Z" fill="#2E52B2" />
+                                                <path
+                                                    d="M2.98168 9.43509L2.73216 8.6117L2.4577 9.43509H1.63431L2.30175 9.93041L2.05224 10.7538L2.73216 10.2456L3.39337 10.7538L3.13762 9.93041L3.81754 9.43509H2.98168ZM6.49357 9.43509L6.23782 8.6117L5.97583 9.43509H5.15244L5.81988 9.93041L5.57037 10.7538L6.23782 10.2456L6.9115 10.7538L6.66199 9.93041L7.32943 9.43509H6.49357ZM10.0179 9.43509L9.74971 8.6117L9.5002 9.43509H8.65809L9.34425 9.93041L9.08226 10.7538L9.74971 10.2456L10.4359 10.7538L10.1739 9.93041L10.8413 9.43509H10.0179ZM13.5236 9.43509L13.2741 8.6117L13.0121 9.43509H12.1825L12.8561 9.93041L12.6066 10.7538L13.2741 10.2456L13.9478 10.7538L13.6795 9.93041L14.3657 9.43509H13.5236ZM6.23782 5.34386L5.97583 6.16725H5.15244L5.81988 6.67544L5.57037 7.48596L6.23782 6.98421L6.9115 7.48596L6.66199 6.67544L7.32943 6.16725H6.49357L6.23782 5.34386ZM2.73216 5.34386L2.4577 6.16725H1.63431L2.30175 6.67544L2.05224 7.48596L2.73216 6.98421L3.39337 7.48596L3.13762 6.67544L3.81754 6.16725H2.98168L2.73216 5.34386ZM9.74971 5.34386L9.5002 6.16725H8.65809L9.34425 6.67544L9.08226 7.48596L9.74971 6.98421L10.4359 7.48596L10.1739 6.67544L10.8413 6.16725H10.0179L9.74971 5.34386ZM13.2741 5.34386L13.0121 6.16725H12.1825L12.8561 6.67544L12.6066 7.48596L13.2741 6.98421L13.9478 7.48596L13.6795 6.67544L14.3657 6.16725H13.5236L13.2741 5.34386ZM2.73216 2.08889L2.4577 2.89942H1.63431L2.30175 3.4076L2.05224 4.22456L2.73216 3.71637L3.39337 4.22456L3.13762 3.4076L3.81754 2.89942H2.98168L2.73216 2.08889ZM6.23782 2.08889L5.97583 2.89942H5.15244L5.81988 3.4076L5.57037 4.22456L6.23782 3.71637L6.9115 4.22456L6.66199 3.4076L7.32943 2.89942H6.49357L6.23782 2.08889ZM9.74971 2.08889L9.5002 2.89942H8.65809L9.34425 3.4076L9.08226 4.22456L9.74971 3.71637L10.4359 4.22456L10.1739 3.4076L10.8413 2.89942H10.0179L9.74971 2.08889ZM13.2741 2.08889L13.0121 2.89942H12.1825L12.8561 3.4076L12.6066 4.22456L13.2741 3.71637L13.9478 4.22456L13.6795 3.4076L14.3657 2.89942H13.5236L13.2741 2.08889Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        En
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="header__list-lg"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="34" height="26" viewBox="0 0 34 26" fill="none">
+                                                    <rect x="0.5" y="0.5" width="33" height="25.0005" stroke="#F2F2F2">
+                                                    </rect>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33 25H1V1H33V25Z"
+                                                        fill="white"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M33 25.0005H1V13.0005H33V25.0005Z" fill="#DC143C"></path>
+                                                </svg></span> <a class="dropdown-item" href="#">Pl</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section id="hero" class="hero" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="hero__text-wrap col-12 col-lg-6 order-2 order-lg-1">
+                        <h1 class="hero__headline headline">
+                            Virtual Bookshelf
+                        </h1>
+                        <p class="hero__text text">
+                            Create virtual bookshelf with access to your online book collection. Share it via link or
+                            integrate it with your own website.
+                        </p>
+                        <a href="#" class="btn btn-primary" aria-label="Create your virtual bookshelf now">
+                            Create Virtual Bookshelf Now
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-6 order-1 order-lg-2 d-lg-flex justify-content-lg-end">
+                        <picture>
+                            <source srcset="assets/images/hero-img.webp" type="image/webp">
+                            <source srcset="assets/images/hero-img.jpg" type="image/jpeg">
+                            <img class="hero__image" src="assets/images/hero-img.jpg"
+                                alt="Virtual Bookshelf promotional image" loading="lazy">
+                        </picture>
+
+                    </div>
                 </div>
             </div>
-        </form>
-        <table class="table table-striped" id="results-table">
-            <thead>
-                <tr>
-                    <th>Tytuł</th>
-                    <th>Rok</th>
-                    <th>Kraj</th>
-                    <th>Typ</th>
-                </tr>
-            </thead>
-            <tbody id="results-table-body">
-            </tbody>
-        </table>
-    </div>
-    <script src="app.js"></script>
+        </section>
+        <section id="sectionOne" class="section-one" data-aos="fade-right">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="d-flex col-12 col-lg-6">
+                        <picture>
+                            <source srcset="assets/images/so-1.webp" type="image/webp">
+                            <source srcset="assets/images/so-1.jpg" type="image/jpeg">
+                            <img class="section-one__image" src="assets/images/so-1.jpg" alt="" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="assets/images/so-2.webp" type="image/webp">
+                            <source srcset="assets/images/so-2.jpg" type="image/jpeg">
+                            <img class="section-one__image" src="assets/images/so-2.jpg" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-lg-end">
+                        <div class="section-one__wrapper">
+                            <div class="section-one__row">
+                                <span>
+                                    <svg width="33" height="24" viewBox="0 0 33 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.125 23.7861L25.7083 14.6195L18.8333 14.6195L18.8333 0.869467L32.5833 0.869469L32.5833 14.6195L28 23.7861L21.125 23.7861ZM2.79168 23.7861L7.37501 14.6195L0.500008 14.6195L0.50001 0.869466L14.25 0.869467L14.25 14.6195L9.66668 23.7861L2.79168 23.7861Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+                                <span>
+                                    <svg width="126" height="25" viewBox="0 0 126 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.3352 17.6078L18.3249 21.223L16.7354 14.4095L22.0273 9.82513L15.0587 9.22423L12.3352 2.80811L9.61179 9.22423L2.64322 9.82513L7.92537 14.4095L6.34557 21.223L12.3352 17.6078Z"
+                                            fill="#FFBB00" />
+                                        <path
+                                            d="M37.7192 17.6078L43.7088 21.223L42.1193 14.4095L47.4112 9.82513L40.4426 9.22423L37.7192 2.80811L34.9957 9.22423L28.0271 9.82513L33.3093 14.4095L31.7295 21.223L37.7192 17.6078Z"
+                                            fill="#FFBB00" />
+                                        <path
+                                            d="M63.1021 17.6078L69.0917 21.223L67.5022 14.4095L72.7941 9.82513L65.8255 9.22423L63.1021 2.80811L60.3786 9.22423L53.41 9.82513L58.6922 14.4095L57.1124 21.223L63.1021 17.6078Z"
+                                            fill="#FFBB00" />
+                                        <path
+                                            d="M88.4859 17.6078L94.4756 21.223L92.8861 14.4095L98.1779 9.82513L91.2094 9.22423L88.4859 2.80811L85.7625 9.22423L78.7939 9.82513L84.076 14.4095L82.4962 21.223L88.4859 17.6078Z"
+                                            fill="#FFBB00" />
+                                        <path
+                                            d="M113.87 17.6078L119.859 21.223L118.27 14.4095L123.562 9.82513L116.593 9.22423L113.87 2.80811L111.146 9.22423L104.178 9.82513L109.46 14.4095L107.88 21.223L113.87 17.6078Z"
+                                            fill="#FFBB00" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <p class="section-one__text">
+                                All my flipbooks look great, and I’m confident that my clients
+                                will have an amazing experience once I send out a link.
+                            </p>
+                            <p class="section-one__author">
+                                Julia R. <span class="section-one__author--signature">| ManagerApparel & Fashion</span>
+                            </p>
+                            <a href="#" class="btn btn-link">
+                                <span class="btn-icon">
+                                    <svg width="12" height="23" viewBox="0 0 12 23" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.4814 22.1304L11.4814 0.130371L-3.34414e-07 11.6099"
+                                            fill="#146EF5" />
+                                    </svg>
+                                </span>
+                                CHECK EXAMPLES
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionTwo" class="section-two" data-aos="fade-left">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <h2 class="section-two__headline headline text-center">
+                            What is Virtual Bookshelf?
+                        </h2>
+                        <p class="section-two__text text text-center">
+                            Virtual Bookshelf is an online space for all your digital books, magazines, brochures and
+                            catalogs – all under one address. It allows your readers to easily access and browse your
+                            publications, creating an impression of a real-life library.
+                        </p>
+                        <picture>
+                            <source srcset="assets/images/so-21.webp" type="image/webp">
+                            <source srcset="assets/images/so-21.jpg" type="image/jpeg">
+                            <img class="image" src="assets/images/so-21.jpg" alt="What is Virtual Bookshelf image"
+                                loading="lazy">
+                        </picture>
+                        <h2 class="section-two__headline headline text-center">
+                            Creating virtual bookshelf with Publuu
+                        </h2>
+                        <p class="section-two__text section-two__text--additionally text text-center">
+                            With Publuu you can make virtual bookshelf with access to your flipbook catalogues,
+                            magazines, brochures with just few clicks. Share it via link or integrate it with you own
+                            site. You don’t need any coding skills to make your own branded virtual bookshelf today.
+                        </p>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary" aria-label="Create your virtual bookshelf now">
+                                Create Virtual Bookshelf Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionThree" class="section-three" data-aos="zoom-in">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h2 class="section-three__headline headline">
+                            Virtual Bookshelf
+                            Features
+                        </h2>
+                    </div>
+
+                    <div class="section-three__row row d-lg-flex align-items-lg-center justify-content-lg-between">
+                        <div class="section-three__text-wrap col-12 col-lg-6 order-2 order-lg-1">
+                            <h3 class="section-three__title">
+                                Enjoy Reading On Any Device
+                            </h3>
+                            <p class="section-three__text text">
+                                Your book collection clearly arranged in one central location - your virtual bookshelf.
+                                All of your clients and readers will have a good overview and easily find what they are
+                                looking for. Desktops, tablets and smartphones – your digital bookshelf fits to every
+                                screen automatically.
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-6 order-1 order-lg-2 d-lg-flex justify-content-lg-end p-lg-0">
+                            <picture>
+                                <source srcset="assets/images/so-34.webp" type="image/webp">
+                                <source srcset="assets/images/so-34.png" type="image/png">
+                                <img class="image" src="assets/images/so-34.png" alt="Enjoy Reading On Any Device image"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="section-three__row row d-lg-flex align-items-lg-center justify-content-lg-between">
+                        <div class="section-three__text-wrap col-12 col-lg-6 order-2 order-lg-2">
+                            <h3 class="section-three__title">
+                                Customize your library
+                            </h3>
+                            <p class="section-three__text text">
+                                Personalize your Virtual Bookshelf with simple to use online creator. Select colors,
+                                backgrounds, upload your logotype and see how it all look in real-time. Create an
+                                appealing digital library for your readers without coding today.
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-6 order-1 order-lg-1 d-lg-flex justify-content-lg-end p-lg-0">
+                            <picture>
+                                <source srcset="assets/images/so-38.webp" type="image/webp">
+                                <source srcset="assets/images/so-38.png" type="image/png">
+                                <img class="image" src="assets/images/so-38.png" alt="Customize your library image"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="section-three__row row d-lg-flex align-items-lg-center justify-content-lg-between">
+                        <div class="section-three__text-wrap col-12 col-lg-6 order-2 order-lg-1">
+                            <h3 class="section-three__title">
+                                Interactive Hotspots
+                            </h3>
+                            <p class="section-three__text text">
+                                Attract your reader's attention. Enrich your books with interactive elements, that can
+                                activate photo galleries, videos or active links inside your e-books.
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-6 order-1 order-lg-2 d-lg-flex justify-content-lg-end p-lg-0">
+                            <picture>
+                                <source srcset="assets/images/so-36.webp" type="image/webp">
+                                <source srcset="assets/images/so-36.png" type="image/png">
+                                <img class="image" src="assets/images/so-36.png" alt="Interactive Hotspots image"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="section-three__row row d-lg-flex align-items-lg-center justify-content-lg-between">
+                        <div class="section-three__text-wrap col-12 col-lg-6 order-2 order-lg-2">
+                            <h3 class="section-three__title">
+                                More Income From Advertisers
+                            </h3>
+                            <p class="section-three__text text">
+                                Add direct links to your clients products inside your books and raise your ad rates. You
+                                may also offer advertising space in your Virtual Bookshelf to generate additional
+                                revenue. See statistics on your books and bookshelf itself.
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-6 order-1 order-lg-1 d-lg-flex justify-content-lg-end p-lg-0">
+                            <picture>
+                                <source srcset="assets/images/so-37.webp" type="image/webp">
+                                <source srcset="assets/images/so-37.png" type="image/png">
+                                <img class="image" src="assets/images/so-37.png" alt="Customize your library image"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionFour" class="section-four" data-aos="zoom-out">
+            <div class="container">
+                <div class="blur-overlay"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-7 z-1">
+                        <h2 class="section-four__headline headline text-center">
+                            How do I Create
+                            a Virtual Bookshelf?
+                        </h2>
+                        <div class="section-four__row row d-lg-flex align-items-lg-center justify-content-lg-between">
+                            <div class="section-four__text-wrap col-12 col-lg-6 order-2 order-lg-2">
+                                <h4 class="section-four__title">
+                                    1. Upload your books (in PDF format)
+                                </h4>
+                                <p class="section-four__text text">
+                                    Upload your publications to Publuu with just a few clicks. You can upload up to 3
+                                    books at the
+                                    same time, so your collection will grow in no time. </p>
+                            </div>
+                            <div class="col-12 col-lg-6 order-1 order-lg-1 d-lg-flex justify-content-lg-start p-0">
+                                <div class="section-four__wrapper">
+                                    <div class="section-four__image-wrap">
+                                        <span class="section-four__image-number">
+                                            1
+                                        </span>
+                                        <img class="section-four__icon" src="assets/images/so-41.svg" alt=""
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-four__row row d-lg-flex align-items-lg-center justify-content-lg-between">
+                            <div class="section-four__text-wrap col-12 col-lg-6 order-2 order-lg-1">
+                                <h4 class="section-four__title">
+                                    2. Customize your Bookshelf
+                                </h4>
+                                <p class="section-four__text text">Use our editor tool to create your dream library.
+                                    Upload your
+                                    background, logotype and banner ad. Customize your text, icons and see how your
+                                    bookshelf looks
+                                    in real-time.</p>
+                            </div>
+                            <div class="col-12 col-lg-6 order-1 order-lg-2 d-lg-flex justify-content-lg-end p-0">
+                                <div class="section-four__wrapper">
+                                    <div class="section-four__image-wrap">
+                                        <span class="section-four__image-number">
+                                            2
+                                        </span>
+                                        <img class="section-four__icon" src="assets/images/so-42.svg" alt=""
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-four__row row d-lg-flex align-items-lg-center justify-content-lg-between">
+                            <div class="section-four__text-wrap col-12 col-lg-6 order-2 order-lg-2">
+                                <h4 class="section-four__title">
+                                    3. Publish it
+                                </h4>
+                                <p class="section-four__text text">
+                                    Once you will be happy with your design, just click LINK and publish it. Now you can
+                                    share it
+                                    with everyone you want through the customizable link or social-media. </p>
+                            </div>
+                            <div class="col-12 col-lg-6 order-1 order-lg-1 d-lg-flex justify-content-lg-start p-0">
+                                <div class="section-four__wrapper">
+                                    <div class="section-four__image-wrap">
+                                        <span class="section-four__image-number">
+                                            3
+                                        </span>
+                                        <img class="section-four__icon" src="assets/images/so-43.svg" alt=""
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionFive" class="section-five" data-aos="flip-left">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="section-five__headline headline text-center">
+                            Virtual Bookshelf examples
+                        </h2>
+                        <p class="offset-lg-2 justify-content-center col-lg-8 section-five__text text text-center">
+                            Publuu - online bookshelf creator is being used by more and more publishing businesses
+                            around the world. Join them and share your book collection with the best possible way.
+                        </p>
+                        <div
+                            class="section-five__wrapper row d-lg-flex align-items-lg-center justify-content-lg-between">
+                            <div class="col-12 col-lg-6 text-center">
+                                <picture>
+                                    <source srcset="assets/images/so-59.webp" type="image/webp">
+                                    <source srcset="assets/images/so-59.jpg" type="image/jpg">
+                                    <img class="section-five__image" src="assets/images/so-59.jpg"
+                                        alt="Virtual Bookshelf examples image" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <picture>
+                                    <source srcset="assets/images/so-51.webp" type="image/webp">
+                                    <source srcset="assets/images/so-51.jpg" type="image/jpg">
+                                    <img class="section-five__image" src="assets/images/so-51.jpg"
+                                        alt="Virtual Bookshelf examples image" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary" aria-label="Create your virtual bookshelf now">
+                                Create My Own Virtual Bookshelf
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionSix" class="section-six section-six--desk" data-aos="flip-right">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <h4 class="section-six__headline text-center">
+                            Leadership awards
+                        </h4>
+
+                        <div class="">
+                            <ul class="section-six__list">
+                                <li class="section-six__item">
+                                    <picture>
+                                        <source srcset="assets/images/so-636.webp" type="image/webp">
+                                        <source srcset="assets/images/so-636.png" type="image/png">
+                                        <img class="section-six__item-img" src="assets/images/so-636.png" alt=""
+                                            loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item">
+                                    <picture>
+                                        <source srcset="assets/images/so-631.webp" type="image/webp">
+                                        <source srcset="assets/images/so-631.png" type="image/png">
+                                        <img class="section-six__item-img" src="assets/images/so-631.png" alt=""
+                                            loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item">
+                                    <picture>
+                                        <source srcset="assets/images/so-632.webp" type="image/webp">
+                                        <source srcset="assets/images/so-632.png" type="image/png">
+                                        <img class="section-six__item-img" src="assets/images/so-632.png" alt=""
+                                            loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item">
+                                    <picture>
+                                        <source srcset="assets/images/so-626.webp" type="image/webp">
+                                        <source srcset="assets/images/so-626.png" type="image/png">
+                                        <img class="section-six__item-img section-six__item-img--active"
+                                            src="assets/images/so-626.png" alt="" loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item">
+                                    <picture>
+                                        <source srcset="assets/images/so-627.webp" type="image/webp">
+                                        <source srcset="assets/images/so-627.png" type="image/png">
+                                        <img class="section-six__item-img" src="assets/images/so-627.png" alt=""
+                                            loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item">
+                                    <picture>
+                                        <source srcset="assets/images/so-628.webp" type="image/webp">
+                                        <source srcset="assets/images/so-628.png" type="image/png">
+                                        <img class="section-six__item-img" src="assets/images/so-628.png" alt=""
+                                            loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item">
+                                    <picture>
+                                        <source srcset="assets/images/so-633.webp" type="image/webp">
+                                        <source srcset="assets/images/so-633.png" type="image/png">
+                                        <img class="section-six__item-img section-six__item-img--active"
+                                            src="assets/images/so-633.png" alt="" loading="lazy">
+                                    </picture>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="">
+                            <ul class="section-six__list-secondary">
+                                <li class="section-six__item-secondary">
+                                    <picture>
+                                        <source srcset="assets/images/so-611.webp" type="image/webp">
+                                        <source srcset="assets/images/so-611.png" type="image/png">
+                                        <img class="section-six__item-secondary-img" src="assets/images/so-611.png"
+                                            alt="" loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item-secondary">
+                                    <picture>
+                                        <source srcset="assets/images/so-612.webp" type="image/webp">
+                                        <source srcset="assets/images/so-612.png" type="image/png">
+                                        <img class="section-six__item-secondary-img" src="assets/images/so-612.png"
+                                            alt="" loading="lazy">
+                                    </picture>
+                                </li>
+                                <li class="section-six__item-secondary">
+                                    <picture>
+                                        <source srcset="assets/images/so-613.webp" type="image/webp">
+                                        <source srcset="assets/images/so-613.png" type="image/png">
+                                        <img class="section-six__item-secondary-img" src="assets/images/so-613.png"
+                                            alt="" loading="lazy">
+                                    </picture>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-six section-six--mobile" data-aos="flip-right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="section-six__headline text-center">
+                            Leadership awards
+                        </h4>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-636.webp" type="image/webp">
+                                        <source srcset="assets/images/so-636.png" type="image/png">
+                                        <img class="swiper-img" src="assets/images/so-636.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-631.webp" type="image/webp">
+                                        <source srcset="assets/images/so-631.png" type="image/png">
+                                        <img class="swiper-img" src="assets/images/so-631.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-632.webp" type="image/webp">
+                                        <source srcset="assets/images/so-632.png" type="image/png">
+                                        <img class="swiper-img" src="assets/images/so-632.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-626.webp" type="image/webp">
+                                        <source srcset="assets/images/so-626.png" type="image/png">
+                                        <img class="swiper-img" src="assets/images/so-626.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-627.webp" type="image/webp">
+                                        <source srcset="assets/images/so-627.png" type="image/png">
+                                        <img class="swiper-img" src="assets/images/so-627.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-628.webp" type="image/webp">
+                                        <source srcset="assets/images/so-628.png" type="image/png">
+                                        <img class="swiper-img" src="assets/images/so-628.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-633.webp" type="image/webp">
+                                        <source srcset="assets/images/so-633.png" type="image/png">
+                                        <img class="swiper-img" src="assets/images/so-633.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-611.webp" type="image/webp">
+                                        <source srcset="assets/images/so-611.png" type="image/png">
+                                        <img class="" src="assets/images/so-611.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-612.webp" type="image/webp">
+                                        <source srcset="assets/images/so-612.png" type="image/png">
+                                        <img class="" src="assets/images/so-612.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/so-613.webp" type="image/webp">
+                                        <source srcset="assets/images/so-613.png" type="image/png">
+                                        <img class="" src="assets/images/so-613.png" alt="" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionSeven" class="section-seven">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <h2 class="section-seven__headline headline text-center">
+                            FAQ
+                        </h2>
+
+
+                        <div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Can I try Publuu for free?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Creating a flipbook is quick and easy with Publuu. Once you upload your PDF,
+                                            the
+                                            conversion happens instantly, and you can customize and share it within
+                                            minutes.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Do I need any special skills to use Publuu?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            Creating a flipbook is quick and easy with Publuu. Once you upload your PDF,
+                                            the
+                                            conversion happens instantly, and you can customize and share it within
+                                            minutes.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            How long does it take to create a flipbook?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Creating a flipbook is quick and easy with Publuu. Once you upload your PDF,
+                                            the
+                                            conversion happens instantly, and you can customize and share it within
+                                            minutes.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Is my content secure with Publuu?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Creating a flipbook is quick and easy with Publuu. Once you upload your PDF,
+                                            the
+                                            conversion happens instantly, and you can customize and share it within
+                                            minutes.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            How many pages can a digital flipbook have?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Creating a flipbook is quick and easy with Publuu. Once you upload your PDF,
+                                            the
+                                            conversion happens instantly, and you can customize and share it within
+                                            minutes.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer" class="footer" data-aos="fade-up">
+
+            <div class="container">
+                <div class="blur-overlay"></div>
+                <div class="row justify-between">
+                    <div class="col-12 col-lg-9 footer__col-left z-1">
+                        <h3 class="footer__title">
+                            Create Your Virtual Bookshelf For Free Today.
+                        </h3>
+                        <a href="#" class="btn btn-primary" aria-label="Get started for FREE">
+                            Get started for FREE
+                        </a>
+                        <div class="footer__card">
+                            <span>
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1994 7.00047L6.19937 3.00047H18.9994C19.5298 3.00047 20.0385 3.21118 20.4136 3.58626C20.7887 3.96133 20.9994 4.47004 20.9994 5.00047V17.0005C21.001 17.2325 20.9604 17.463 20.8794 17.6805L13.1994 10.0005H18.9994V7.00047M19.8394 21.7305L17.1094 19.0005H2.99937C2.46894 19.0005 1.96023 18.7898 1.58516 18.4147C1.21009 18.0396 0.999375 17.5309 0.999375 17.0005V5.00047C1.00153 4.7255 1.06037 4.45393 1.17221 4.20272C1.28405 3.95152 1.44648 3.72607 1.64938 3.54047L0.109375 2.00047L1.38938 0.730469L21.1094 20.4605M8.10937 10.0005L5.10938 7.00047H2.99937V10.0005H8.10937Z"
+                                        fill="#FFFFFF66" />
+                                </svg>
+                            </span>
+                            <span class="footer__card-text">
+                                No credit card required
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-lg-2 offset-lg-1">
+                        <h5 class="footer__headline">With Publuu you can
+                            also create:
+                        </h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link active p-0">Online Magazine</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Online Brochure</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Online Catalog</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Online Ebook</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Online Portfolio</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Business Proposal</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Multimedia Presentation</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Trackable document</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Digital Photo Album</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Lead Generation</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="footer__bottom">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5 class="footer__nav-title">PUBLUU</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Reviews</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Price plan</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Try for free</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Site Map</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5 class="footer__nav-title">Features</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Virtual Bookshelf</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Flipbook App</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Statistics</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">PDF tracking</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5 class="footer__nav-title">Legal</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Terms & conditions</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Privacy statement</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Cookie policy</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Refund policy</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Content Protection</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5 class="footer__nav-title">Help</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">What is a Flipbook?</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Help Guide</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Blog</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5 class="footer__nav-title">Solutions</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Flipbook Maker</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Online Catalog</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Magazine Maker</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Brochure Maker</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">PDF Page Flip Effect</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5 class="footer__nav-title footer__nav-title--last"> </h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Business Proposal</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Ebook Maker</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Multimedia Presentation</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Company Newsletter Maker</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center flex-sm-row justify-content-between py-4 my-4">
+                        <div>
+                            <a class="nav-link dropdown-toggle footer__lg" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.36 12C14.44 11.34 14.5 10.68 14.5 10C14.5 9.32 14.44 8.66 14.36 8H17.74C17.9 8.64 18 9.31 18 10C18 10.69 17.9 11.36 17.74 12M12.59 17.56C13.19 16.45 13.65 15.25 13.97 14H16.92C15.96 15.65 14.43 16.93 12.59 17.56ZM12.34 12H7.66C7.56 11.34 7.5 10.68 7.5 10C7.5 9.32 7.56 8.65 7.66 8H12.34C12.43 8.65 12.5 9.32 12.5 10C12.5 10.68 12.43 11.34 12.34 12ZM10 17.96C9.17 16.76 8.5 15.43 8.09 14H11.91C11.5 15.43 10.83 16.76 10 17.96ZM6 6H3.08C4.03 4.34 5.57 3.06 7.4 2.44C6.8 3.55 6.35 4.75 6 6ZM3.08 14H6C6.35 15.25 6.8 16.45 7.4 17.56C5.57 16.93 4.03 15.65 3.08 14ZM2.26 12C2.1 11.36 2 10.69 2 10C2 9.31 2.1 8.64 2.26 8H5.64C5.56 8.66 5.5 9.32 5.5 10C5.5 10.68 5.56 11.34 5.64 12M10 2.03C10.83 3.23 11.5 4.57 11.91 6H8.09C8.5 4.57 9.17 3.23 10 2.03ZM16.92 6H13.97C13.65 4.75 13.19 3.55 12.59 2.44C14.43 3.07 15.96 4.34 16.92 6ZM10 0C4.47 0 0 4.5 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C3.85752 17.9997 4.95991 18.7362 6.17317 19.2388C7.38642 19.7413 8.68678 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0Z"
+                                            fill="#FFFFFF66" />
+                                    </svg>
+
+                                </span>
+                                English
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header__list-lg"><span><svg xmlns="http://www.w3.org/2000/svg" width="34"
+                                            height="26" viewBox="0 0 34 26" fill="none">
+                                            <rect x="0.5" y="0.5" width="33" height="25.0005" stroke="#F2F2F2"></rect>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33 25H1V1H33V25Z"
+                                                fill="white"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M33 25.0005H1V13.0005H33V25.0005Z" fill="#DC143C"></path>
+                                        </svg></span> <a class="dropdown-item" href="#">Pl</a></li>
+                            </ul>
+                        </div>
+                        <p class="text-center">Convert your PDF into HTML5 Online flipbook with PAGE FLIP EFFECT. <br>
+                            All-in-one Flipbook Maker
+                        </p>
+                        <div>
+                            <span class="footer__link">
+                                Follow Us:
+                            </span>
+                            <a class="footer__link-a" href="#">
+                                Facebook
+                            </a>
+                            <span class="footer__link">
+                                |
+                            </span>
+
+                            <a class="footer__link-a" href="#">
+                                Linkedin
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 </body>
 
 </html>
