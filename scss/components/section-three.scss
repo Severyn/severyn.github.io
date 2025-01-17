@@ -1,0 +1,43 @@
+.section-three {
+  background: linear-gradient(180deg, #F1FAFF 0%, #FFFFFF 100%);
+  padding: rem-calc(120 0 0);
+
+  &__headline {
+    margin-bottom: rem-calc(80);
+  }
+
+  .image {
+    margin-bottom: rem-calc(30);
+
+    @media only screen and (min-width: 62rem) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
+    margin-bottom: rem-calc(160);
+  }
+
+  &__title {
+    font-family: "Urbanist", serif;
+    font-size: rem-calc(30);
+    line-height: 1.17;
+    margin-bottom: rem-calc(30);
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+
+  @media only screen and (min-width: 62rem) {
+    &__title {
+      font-family: "Urbanist", serif;
+      font-size: rem-calc(34);
+    }
+
+    &__text-wrap {
+      max-width: rem-calc(520);
+    }
+  }
+
+}

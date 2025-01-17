@@ -1,0 +1,17 @@
+// Podstawa dla rem (domyślnie 16px)
+$rem-base: 16;
+
+// Funkcja do konwersji px na rem
+@function rem-calc($value, $base-value: $rem-base) {
+  // Jeśli wartość to lista (np. 16px 32px 8px)
+  @if type-of($value) == "list" {
+    $rem-values: ();
+    @each $v in $value {
+      $rem-values: append($rem-values, ($v / $base-value) * 1rem);
+    }
+    @return $rem-values;
+  }
+
+  // Jeśli wartość to pojedyncza liczba (np. 16px)
+  @return ($value / $base-value) * 1rem;
+}

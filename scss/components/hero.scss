@@ -1,0 +1,25 @@
+.hero {
+  padding-top: rem-calc(35);
+  &__headline {
+    margin-bottom: rem-calc(10);
+  }
+  &__text{
+    margin-bottom: rem-calc(20);
+    @media only screen and (min-width: 62rem) {
+      max-width: rem-calc(570);
+      margin-bottom: rem-calc(40);
+    }
+  }
+  &__image {
+    width: 100%;
+    @media only screen and (min-width: 62rem) {
+      width: 100%;
+      max-width: rem-calc(550);
+    }
+  }
+  &__text-wrap {
+    @media only screen and (min-width: 62rem) {
+      padding-top: rem-calc(80);
+    }
+  }
+}

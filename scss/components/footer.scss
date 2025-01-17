@@ -1,0 +1,149 @@
+.footer {
+  padding-top: rem-calc(120);
+  padding-bottom: rem-calc(40);
+  position: relative;
+  background-color: $secondary;
+
+  .blur-overlay {
+    display: none;
+    position: absolute;
+    top: -564px;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 1128px;
+    height: 1128px;
+    max-width: 1128px;
+    width: 100%;
+    background: radial-gradient(circle, rgba(20, 110, 245, 1) -50%, rgba(20, 110, 245, 0) 60%);
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+    @media only screen and (min-width: 62rem) {
+      display: block;
+
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: rem-calc(40);
+    font-family: "Urbanist", serif;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: rem-calc(60);
+    @media only screen and (min-width: 62rem) {
+      font-size: rem-calc(60);
+      max-width: rem-calc(740);
+    }
+  }
+
+  .btn {
+    margin-bottom: rem-calc(60);
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+  }
+
+  &__card-text {
+    color: #FFFFFF66;
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+    padding: rem-calc(2 7);
+  }
+
+  &__headline {
+    margin-top: rem-calc(40);
+    color: #FFFFFF66;
+    font-size: rem-calc(24);
+    font-family: "Urbanist", serif;
+    font-weight: 700;
+    margin-bottom: rem-calc(28);
+    @media only screen and (min-width: 62rem) {
+      margin-top: 0;
+
+    }
+  }
+
+  .nav-link {
+    font-family: "Urbanist", serif;
+    font-weight: 600;
+    color: #FFFFFF66;
+    font-size: rem-calc(16);
+    line-height: 1.57;
+  }
+
+  .nav-link:hover {
+    transition-duration: .3s;
+    color: white;
+  }
+
+  &__col-left {
+    @media only screen and (min-width: 62rem) {
+      border-right: 1px solid #FFFFFF66;
+    }
+  }
+
+  &__lg {
+    flex: rem-calc(16);
+    font-family: "Urbanist", serif;
+    text-transform: uppercase;
+    color: #FFFFFF66;
+  }
+
+  .text-center {
+    font-family: "Urbanist", serif;
+    font-weight: 700;
+    font-size: rem-calc(14);
+    color: #FFFFFF66;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-size: rem-calc(16);
+    font-family: "Urbanist", serif;
+    color: #FFFFFF66;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__link-a {
+    font-size: rem-calc(16);
+    font-family: "Urbanist", serif;
+    color: #FFFFFF66;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__link-a:hover {
+    color: $white;
+    transition-duration: .3s;
+  }
+
+  &__bottom {
+    margin-top: rem-calc(120);
+    border-top: 1px solid #FFFFFF66;
+    padding: rem-calc(60 0 30);
+  }
+
+
+  &__nav-title {
+    font-family: "Urbanist", serif;
+    text-transform: uppercase;
+    color: $white;
+    font-size: rem-calc(16);
+    font-weight: 700;
+    margin-bottom: rem-calc(10);
+
+    &--last {
+      @media only screen and (min-width: 62rem) {
+       height: rem-calc(20);
+      }
+    }
+  }
+}
+
+

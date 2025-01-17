@@ -1,0 +1,16 @@
+{
+  "name": "publuu-opole",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "scss --watch scss/main.scss css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.1"
+  },
+  "description": ""
+}

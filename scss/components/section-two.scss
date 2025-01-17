@@ -1,0 +1,16 @@
+.section-two {
+  padding: rem-calc(120 0 160);
+  .image {
+    margin-bottom: rem-calc(120);
+  }
+  &__headline{
+    margin-bottom: rem-calc(40);
+  }
+  &__text {
+    margin-bottom: rem-calc(80);
+    &--additionally {
+      margin-bottom: rem-calc(60);
+
+    }
+  }
+}

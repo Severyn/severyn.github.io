@@ -1,0 +1,112 @@
+$primary: #146EF5;
+$secondary: #080808;
+$white: #FFFFFF;
+$gray: #FFFFFF66;
+$hover: #1354A9;
+
+@import '../fonts/fonts.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $secondary;
+  font-family: "Roboto", serif;
+}
+
+.container {
+  max-width: rem-calc(1315);
+}
+
+.btn.btn-primary {
+  border-radius: rem-calc(50);
+  padding: rem-calc(15 30);
+  font-weight: 700;
+  line-height: 1.1;
+  background-color: $primary;
+}
+
+.btn.btn-primary--black{
+  background-color: $secondary;
+  border: 2px solid $secondary;
+}
+
+.btn.btn-primary--black:hover{
+  border: 2px solid $secondary;
+  background-color: $white;
+  color: $secondary;
+}
+
+.btn.btn-primary--white {
+  background-color: white;
+  border: 2px solid $secondary;
+  color: $secondary;
+  margin: rem-calc(0 20 0 10);
+}
+
+.btn.btn-primary--white:hover {
+  background-color: $secondary;
+  border: 2px solid $secondary;
+  color: $white;
+}
+
+.btn:hover, btn-primary:hover {
+  transition-duration: .3s;
+  background-color: $hover;
+}
+
+.btn.btn-link {
+  font-weight: 900;
+  font-size: rem-calc(18);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $secondary;
+  padding: 0;
+  .btn-icon {
+    padding-right: rem-calc(17);
+  }
+}
+
+.btn.btn-link:hover {
+  transition-duration: .3s;
+  background-color: transparent;
+  color: $primary;
+
+}
+
+.image {
+  width: 100%;
+}
+
+.nav {
+  font-size: rem-calc(16);
+}
+
+.headline {
+  font-family: "Urbanist", serif;
+  font-size: rem-calc(55);
+  font-weight: 900;
+  color: $secondary;
+  line-height: 1.18;
+}
+
+.text {
+  font-family: "Roboto", serif;
+  font-size: rem-calc(16);
+  line-height: 1.5;
+  color: $secondary;
+}
+
+
+@media only screen and (min-width: 62rem) {
+  .headline {
+    font-size: rem-calc(80);
+
+  }
+
+  .text {
+    font-family: "Roboto", serif;
+    font-size: rem-calc(18);
+    line-height: 1.66;
+  }
+}

@@ -1,0 +1,69 @@
+.section-seven {
+  padding: rem-calc(120 0 160);
+
+  .accordion-button {
+    @media only screen and (min-width: 62rem) {
+      padding: rem-calc(30);
+    }
+  }
+
+  &__headline {
+    margin-bottom: rem-calc(70);
+  }
+
+  .accordion-button {
+    font-size: rem-calc(20);
+    font-weight: 600;
+
+    @media only screen and (min-width: 62rem) {
+      font-size: rem-calc(24);
+    }
+  }
+
+  .accordion-body {
+    font-size: rem-calc(18);
+    font-weight: 400;
+    @media only screen and (min-width: 62rem) {
+      max-width: rem-calc(725);
+      padding: rem-calc(0 30 50 30);
+    }
+
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-size: rem-calc(14);
+    background-image: url("../assets/images/fq-m.svg");
+    transform: url("../assets/images/faq-p.svg");
+    height: rem-calc(5);
+    margin-right: rem-calc(6);
+  }
+
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid #B3C0D3;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: $secondary;
+    box-shadow: none;
+  }
+
+  .accordion-item:first-of-type>.accordion-header .accordion-button {
+    border: none;
+  }
+
+  .accordion-button:not(.collapsed) {
+    border: none;
+    background-color: $white;
+  }
+
+  .accordion-button::after {
+    background-size: rem-calc(14);
+    background-image: url("../assets/images/faq-p.svg");
+    transform: url("../assets/images/fq-m.svg");
+  }
+}

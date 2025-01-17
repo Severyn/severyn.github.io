@@ -1,0 +1,327 @@
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-Black.eot');
+  src: url('../assets/fonts/Urbanist-Black.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-Black.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-Black.woff') format('woff'),
+  url('../assets/fonts/Urbanist-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-BoldItalic.eot');
+  src: url('../assets/fonts/Urbanist-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-BoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-BoldItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-BlackItalic.eot');
+  src: url('../assets/fonts/Urbanist-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-BlackItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-BlackItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-Bold.eot');
+  src: url('../assets/fonts/Urbanist-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-Bold.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-Bold.woff') format('woff'),
+  url('../assets/fonts/Urbanist-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-LightItalic.eot');
+  src: url('../assets/fonts/Urbanist-LightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-LightItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-ExtraLight.eot');
+  src: url('../assets/fonts/Urbanist-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-ExtraLight.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-ExtraLight.woff') format('woff'),
+  url('../assets/fonts/Urbanist-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-Light.eot');
+  src: url('../assets/fonts/Urbanist-Light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-Light.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-Light.woff') format('woff'),
+  url('../assets/fonts/Urbanist-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-Thin.eot');
+  src: url('../assets/fonts/Urbanist-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-Thin.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-Thin.woff') format('woff'),
+  url('../assets/fonts/Urbanist-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-MediumItalic.eot');
+  src: url('../assets/fonts/Urbanist-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-MediumItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-MediumItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-SemiBold.eot');
+  src: url('../assets/fonts/Urbanist-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-SemiBold.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-SemiBold.woff') format('woff'),
+  url('../assets/fonts/Urbanist-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-ExtraLightItalic.eot');
+  src: url('../assets/fonts/Urbanist-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-ExtraLightItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-ExtraLightItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-Regular.eot');
+  src: url('../assets/fonts/Urbanist-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-Regular.woff') format('woff'),
+  url('../assets/fonts/Urbanist-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-ThinItalic.eot');
+  src: url('../assets/fonts/Urbanist-ThinItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-ThinItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-ThinItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-SemiBoldItalic.eot');
+  src: url('../assets/fonts/Urbanist-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-SemiBoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-SemiBoldItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-ExtraBoldItalic.eot');
+  src: url('../assets/fonts/Urbanist-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-ExtraBoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-ExtraBoldItalic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-ExtraBold.eot');
+  src: url('../assets/fonts/Urbanist-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-ExtraBold.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-ExtraBold.woff') format('woff'),
+  url('../assets/fonts/Urbanist-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-Italic.eot');
+  src: url('../assets/fonts/Urbanist-Italic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-Italic.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-Italic.woff') format('woff'),
+  url('../assets/fonts/Urbanist-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('../assets/fonts/Urbanist-Medium.eot');
+  src: url('../assets/fonts/Urbanist-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Urbanist-Medium.woff2') format('woff2'),
+  url('../assets/fonts/Urbanist-Medium.woff') format('woff'),
+  url('../assets/fonts/Urbanist-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-BlackItalic.eot');
+  src: url('../assets/fonts/Roboto-BlackItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-BlackItalic.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-BlackItalic.woff') format('woff'),
+  url('../assets/fonts/Roboto-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.eot');
+  src: url('../assets/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-Regular.woff') format('woff'),
+  url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Medium.eot');
+  src: url('../assets/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-Medium.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-Medium.woff') format('woff'),
+  url('../assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-LightItalic.eot');
+  src: url('../assets/fonts/Roboto-LightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-LightItalic.woff') format('woff'),
+  url('../assets/fonts/Roboto-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Bold.eot');
+  src: url('../assets/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-Bold.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-Bold.woff') format('woff'),
+  url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Black.eot');
+  src: url('../assets/fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-Black.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-Black.woff') format('woff'),
+  url('../assets/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Light.eot');
+  src: url('../assets/fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-Light.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-Light.woff') format('woff'),
+  url('../assets/fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Thin.eot');
+  src: url('../assets/fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-Thin.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-Thin.woff') format('woff'),
+  url('../assets/fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-BoldItalic.eot');
+  src: url('../assets/fonts/Roboto-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Roboto-BoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Roboto-BoldItalic.woff') format('woff'),
+  url('../assets/fonts/Roboto-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
