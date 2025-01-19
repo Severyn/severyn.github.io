@@ -1,10 +1,10 @@
+@import '../fonts/fonts.scss';
+
 $primary: #146EF5;
 $secondary: #080808;
 $white: #FFFFFF;
 $gray: #FFFFFF66;
 $hover: #1354A9;
-
-@import '../fonts/fonts.scss';
 
 * {
   margin: 0;
@@ -26,19 +26,19 @@ $hover: #1354A9;
   background-color: $primary;
 }
 
-.btn.btn-primary--black{
+.btn.btn-primary--black {
   background-color: $secondary;
   border: 2px solid $secondary;
 }
 
-.btn.btn-primary--black:hover{
+.btn.btn-primary--black:hover {
   border: 2px solid $secondary;
   background-color: $white;
   color: $secondary;
 }
 
 .btn.btn-primary--white {
-  background-color: white;
+  background-color: $white;
   border: 2px solid $secondary;
   color: $secondary;
   margin: rem-calc(0 20 0 10);
@@ -50,7 +50,8 @@ $hover: #1354A9;
   color: $white;
 }
 
-.btn:hover, btn-primary:hover {
+.btn:hover,
+.btn-primary:hover {
   transition-duration: .3s;
   background-color: $hover;
 }
@@ -62,9 +63,10 @@ $hover: #1354A9;
   text-transform: uppercase;
   color: $secondary;
   padding: 0;
-  .btn-icon {
-    padding-right: rem-calc(17);
-  }
+}
+
+.btn .btn-icon {
+  padding-right: rem-calc(17);
 }
 
 .btn.btn-link:hover {

@@ -1,4 +1,4 @@
-.section-seven {
+.section-faq {
   padding: rem-calc(120 0 160);
 
   .accordion-button {
@@ -23,6 +23,7 @@
   .accordion-body {
     font-size: rem-calc(18);
     font-weight: 400;
+
     @media only screen and (min-width: 62rem) {
       max-width: rem-calc(725);
       padding: rem-calc(0 30 50 30);

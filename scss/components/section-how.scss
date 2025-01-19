@@ -1,4 +1,4 @@
-.section-four {
+.section-how {
   padding-top: rem-calc(120);
   padding-bottom: rem-calc(40);
   position: relative;
@@ -24,8 +24,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: rem-calc(40);
+
     @media only screen and (min-width: 62rem) {
-      padding: 0  0 0 rem-calc(40);
+      padding: 0 0 0 rem-calc(40);
       display: block;
       margin-bottom: 0;
     }
@@ -87,4 +88,3 @@
   }
 
 }
-

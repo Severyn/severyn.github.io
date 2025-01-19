@@ -465,7 +465,7 @@
 }
 
 .btn.btn-primary--white {
-  background-color: white;
+  background-color: #FFFFFF;
   border: 2px solid #080808;
   color: #080808;
   margin: 0rem 1.25rem 0rem 0.625rem;
@@ -477,7 +477,8 @@
   color: #FFFFFF;
 }
 
-.btn:hover, btn-primary:hover {
+.btn:hover,
+.btn-primary:hover {
   transition-duration: 0.3s;
   background-color: #1354A9;
 }
@@ -490,7 +491,8 @@
   color: #080808;
   padding: 0;
 }
-.btn.btn-link .btn-icon {
+
+.btn .btn-icon {
   padding-right: 1.0625rem;
 }
 
@@ -643,159 +645,159 @@
   }
 }
 
-.hero {
+.section-hero {
   padding-top: 2.1875rem;
 }
-.hero__headline {
+.section-hero__headline {
   margin-bottom: 0.625rem;
 }
-.hero__text {
+.section-hero__text {
   margin-bottom: 1.25rem;
 }
 @media only screen and (min-width: 62rem) {
-  .hero__text {
+  .section-hero__text {
     max-width: 35.625rem;
     margin-bottom: 2.5rem;
   }
 }
-.hero__image {
+.section-hero__image {
   width: 100%;
 }
 @media only screen and (min-width: 62rem) {
-  .hero__image {
+  .section-hero__image {
     width: 100%;
     max-width: 34.375rem;
   }
 }
 @media only screen and (min-width: 62rem) {
-  .hero__text-wrap {
+  .section-hero__text-wrap {
     padding-top: 5rem;
   }
 }
 
-.section-one {
+.section-check {
   margin-top: 2.5rem;
   background: linear-gradient(0deg, #F1FAFF 0%, #FFFFFF 100%);
   padding-bottom: 3.75rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-one {
+  .section-check {
     padding-bottom: 7.5rem;
   }
 }
-.section-one__row {
+.section-check__row {
   margin-bottom: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-one__text {
+.section-check__text {
   font-weight: 800;
   font-size: 1.0625rem;
   line-height: 1.4;
   margin-bottom: 0.3125rem;
 }
-.section-one__author {
+.section-check__author {
   font-size: 0.875rem;
   line-height: 1.7;
   font-weight: 700;
   margin-bottom: 2.5rem;
 }
-.section-one__author--signature {
+.section-check__author--signature {
   font-weight: 500;
 }
 @media only screen and (min-width: 87.5rem) {
-  .section-one__right, .section-one__wrapper {
+  .section-check__right, .section-check__wrapper {
     width: 34.375rem;
   }
 }
-.section-one__wrapper {
+.section-check__wrapper {
   margin-top: 2.5rem;
   border-radius: 0.3125rem;
   background-color: #FFFFFF;
   padding: 2.8125rem 2.5rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-one__wrapper {
+  .section-check__wrapper {
     margin-top: 0;
   }
 }
-.section-one__image {
+.section-check__image {
   padding: 0.625rem;
   width: 100%;
 }
 @media only screen and (min-width: 62rem) {
-  .section-one__image {
+  .section-check__image {
     padding: 0 0.3125rem;
   }
-  .section-one__image__image:first-child {
+  .section-check__image__image:first-child {
     padding-left: 1rem;
   }
-  .section-one__image__image:last-child {
+  .section-check__image__image:last-child {
     padding-right: 1rem;
   }
 }
 
-.section-two {
+.section-bookshelf {
   padding: 7.5rem 0rem 10rem;
 }
-.section-two .image {
+.section-bookshelf .image {
   margin-bottom: 7.5rem;
 }
-.section-two__headline {
+.section-bookshelf__headline {
   margin-bottom: 2.5rem;
 }
-.section-two__text {
+.section-bookshelf__text {
   margin-bottom: 5rem;
 }
-.section-two__text--additionally {
+.section-bookshelf__text--additionally {
   margin-bottom: 3.75rem;
 }
 
-.section-three {
+.section-features {
   background: linear-gradient(180deg, #F1FAFF 0%, #FFFFFF 100%);
   padding: 7.5rem 0rem 0rem;
 }
-.section-three__headline {
+.section-features__headline {
   margin-bottom: 5rem;
 }
-.section-three .image {
+.section-features .image {
   margin-bottom: 1.875rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-three .image {
+  .section-features .image {
     margin-bottom: 0;
   }
 }
-.section-three__row {
+.section-features__row {
   margin-bottom: 10rem;
 }
-.section-three__title {
+.section-features__title {
   font-family: "Urbanist", serif;
   font-size: 1.875rem;
   line-height: 1.17;
   margin-bottom: 1.875rem;
 }
-.section-three__text {
+.section-features__text {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 62rem) {
-  .section-three__title {
+  .section-features__title {
     font-family: "Urbanist", serif;
     font-size: 2.125rem;
   }
-  .section-three__text-wrap {
+  .section-features__text-wrap {
     max-width: 32.5rem;
   }
 }
 
-.section-four {
+.section-how {
   padding-top: 7.5rem;
   padding-bottom: 2.5rem;
   position: relative;
   background-color: #080808;
 }
-.section-four .blur-overlay {
+.section-how .blur-overlay {
   position: absolute;
   top: -564px;
   left: 50%;
@@ -810,35 +812,35 @@
   z-index: 0;
   pointer-events: none;
 }
-.section-four__wrapper {
+.section-how__wrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 2.5rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-four__wrapper {
+  .section-how__wrapper {
     padding: 0 0 0 2.5rem;
     display: block;
     margin-bottom: 0;
   }
 }
-.section-four__headline {
+.section-how__headline {
   color: #FFFFFF;
   margin-bottom: 8.125rem;
 }
-.section-four__title {
+.section-how__title {
   color: #FFFFFF;
   margin-bottom: 0.625rem;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.6;
 }
-.section-four__text {
+.section-how__text {
   color: #FFFFFF;
   opacity: 70%;
   line-height: 1.7;
 }
-.section-four__image-wrap {
+.section-how__image-wrap {
   border: 3px solid rgba(255, 255, 255, 0.1019607843);
   width: 11.875rem;
   height: 12.5rem;
@@ -848,10 +850,10 @@
   justify-content: center;
   position: relative;
 }
-.section-four__icon {
+.section-how__icon {
   width: 5rem;
 }
-.section-four__image-number {
+.section-how__image-number {
   background-color: #146EF5;
   color: #FFFFFF;
   font-size: 1.75rem;
@@ -866,51 +868,51 @@
   top: -1.875rem;
   left: -1.875rem;
 }
-.section-four__row {
+.section-how__row {
   margin-bottom: 7.5rem;
 }
 
-.section-five {
+.section-examples {
   padding: 7.5rem 0rem;
 }
-.section-five__headline {
+.section-examples__headline {
   margin-bottom: 2.5rem;
 }
-.section-five__text {
+.section-examples__text {
   margin-bottom: 6.25rem;
 }
-.section-five__image {
+.section-examples__image {
   width: 100%;
   margin-bottom: 1.25rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-five__image {
+  .section-examples__image {
     max-width: 25.625rem;
     margin-bottom: 0;
   }
 }
-.section-five__wrapper {
+.section-examples__wrapper {
   margin-bottom: 7.5rem;
 }
 
-.section-six {
+.section-awards {
   padding: 7.5rem 0rem 10rem;
   background-color: #F1FAFF;
 }
-.section-six__img-secondary {
+.section-awards__img-secondary {
   width: 100%;
   padding: 0 1.25rem;
 }
-.section-six__headline {
+.section-awards__headline {
   font-size: 2.1875rem;
   margin-bottom: 2.5rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-six__headline {
+  .section-awards__headline {
     font-size: 2.5rem;
   }
 }
-.section-six__list-secondary {
+.section-awards__list-secondary {
   margin: 2.5rem 0 0;
   list-style: none;
   padding: 0;
@@ -920,11 +922,11 @@
   align-items: center;
 }
 @media only screen and (min-width: 36rem) {
-  .section-six__list-secondary {
+  .section-awards__list-secondary {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.section-six__list-first {
+.section-awards__list-first {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -934,99 +936,99 @@
   align-items: center;
 }
 @media only screen and (min-width: 36rem) {
-  .section-six__list-first {
+  .section-awards__list-first {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 62rem) {
-  .section-six__list-first {
+  .section-awards__list-first {
     grid-template-columns: repeat(7, 1fr);
   }
 }
-.section-six__img-first {
+.section-awards__img-first {
   height: 100%;
   max-height: 5.875rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-six__img-first {
+  .section-awards__img-first {
     max-height: fit-content;
   }
 }
-.section-six__item-first {
+.section-awards__item-first {
   justify-self: center;
 }
-.section-six .swiper-slide {
+.section-awards .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-.section-six .swiper {
+.section-awards .swiper {
   margin-bottom: 3.125rem;
 }
-.section-six .swiper-wrapper {
+.section-awards .swiper-wrapper {
   margin-bottom: 3.75rem;
 }
-.section-six .swiper-img {
+.section-awards .swiper-img {
   max-height: 5.8125rem;
 }
 
-.section-seven {
+.section-faq {
   padding: 7.5rem 0rem 10rem;
 }
 @media only screen and (min-width: 62rem) {
-  .section-seven .accordion-button {
+  .section-faq .accordion-button {
     padding: 1.875rem;
   }
 }
-.section-seven__headline {
+.section-faq__headline {
   margin-bottom: 4.375rem;
 }
-.section-seven .accordion-button {
+.section-faq .accordion-button {
   font-size: 1.25rem;
   font-weight: 600;
 }
 @media only screen and (min-width: 62rem) {
-  .section-seven .accordion-button {
+  .section-faq .accordion-button {
     font-size: 1.5rem;
   }
 }
-.section-seven .accordion-body {
+.section-faq .accordion-body {
   font-size: 1.125rem;
   font-weight: 400;
 }
 @media only screen and (min-width: 62rem) {
-  .section-seven .accordion-body {
+  .section-faq .accordion-body {
     max-width: 45.3125rem;
     padding: 0rem 1.875rem 3.125rem 1.875rem;
   }
 }
-.section-seven .accordion-button:not(.collapsed)::after {
+.section-faq .accordion-button:not(.collapsed)::after {
   background-size: 0.875rem;
   background-image: url("../assets/images/fq-m.svg");
   transform: url("../assets/images/faq-p.svg");
   height: 0.3125rem;
   margin-right: 0.375rem;
 }
-.section-seven .accordion-item {
+.section-faq .accordion-item {
   border: none;
   border-bottom: 1px solid #B3C0D3;
 }
-.section-seven .accordion-item:last-child {
+.section-faq .accordion-item:last-child {
   border: none;
 }
-.section-seven .accordion-button:not(.collapsed) {
+.section-faq .accordion-button:not(.collapsed) {
   color: #080808;
   box-shadow: none;
 }
-.section-seven .accordion-item:first-of-type > .accordion-header .accordion-button {
+.section-faq .accordion-item:first-of-type > .accordion-header .accordion-button {
   border: none;
 }
-.section-seven .accordion-button:not(.collapsed) {
+.section-faq .accordion-button:not(.collapsed) {
   border: none;
   background-color: #FFFFFF;
 }
-.section-seven .accordion-button::after {
+.section-faq .accordion-button::after {
   background-size: 0.875rem;
   background-image: url("../assets/images/faq-p.svg");
   transform: url("../assets/images/fq-m.svg");
@@ -1041,12 +1043,12 @@
 .footer .blur-overlay {
   display: none;
   position: absolute;
-  top: -564px;
+  top: -35.25rem;
   left: 10%;
   transform: translateX(-50%);
-  width: 1128px;
-  height: 1128px;
-  max-width: 1128px;
+  width: 70.5rem;
+  height: 70.5rem;
+  max-width: 70.5rem;
   width: 100%;
   background: radial-gradient(circle, rgb(20, 110, 245) -50%, rgba(20, 110, 245, 0) 60%);
   clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
@@ -1108,7 +1110,7 @@
 }
 .footer .nav-link:hover {
   transition-duration: 0.3s;
-  color: white;
+  color: #FFFFFF;
 }
 @media only screen and (min-width: 62rem) {
   .footer__col-left {
